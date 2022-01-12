@@ -22,19 +22,52 @@
         android:id="@+id/req_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Start requests"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="12dp"
+        android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/period_time" />
 
     <Button
         android:id="@+id/add_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="@+id/req_start"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintTop_toTopOf="@+id/req_start"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="@+id/req_start"
+        app:layout_constraintEnd_toStartOf="@+id/add_btn"
         app:layout_constraintStart_toEndOf="@+id/req_start"
         app:layout_constraintTop_toTopOf="@+id/req_start" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/req_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/req_start"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <EditText
+        android:id="@+id/period_time"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/req_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/req_start"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

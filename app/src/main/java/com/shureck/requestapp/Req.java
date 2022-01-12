@@ -1,5 +1,7 @@
 package com.shureck.requestapp;
 
+import android.support.annotation.NonNull;
+
 public class Req {
     String address;
     String port;
@@ -33,5 +35,11 @@ public class Req {
 
     public String getTimeout() {
         return timeout;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
